@@ -1,0 +1,379 @@
+@charset "UTF-8";
+
+/* Add Montserrat Font To Project */
+@font-face {
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: normal;
+    src: local('Montserrat Regular'), url('../fonts/Montserrat/Montserrat-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'PTFont';
+    font-style: normal;
+    font-weight: normal;
+    src: local('PTFont Regular'), url('../fonts/PTFont/PTSerif-Regular.ttf') format('ttf');
+}
+
+:root {
+    --yellow: #FFEAA0;
+}
+
+.head-style {
+    letter-spacing: 0.205em;
+}
+
+.bg-navy {
+    background-color: #00121C !important;
+}
+
+.Montserrat-Font {
+    font-family: Montserrat, serif;
+}
+
+.footer-info {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 20px;
+    /* identical to box height */
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: capitalize;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.header-ul>h6 {
+    color: var(--yellow);
+    margin-bottom: 18px;
+}
+
+.header-ul li {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 18px;
+    line-height: 22px;
+    /* identical to box height */
+    letter-spacing: 0.05em;
+
+    margin-bottom: 15px;
+}
+
+.rotate-clock-wise {
+    transform: rotate(90deg);
+}
+
+.text-uppercase {
+    text-transform: uppercase;
+}
+
+.part-1-img>img {
+    border-top-left-radius: 300px;
+    border-bottom-left-radius: 300px;
+    position: absolute;
+    right: 0;
+    height: -webkit-fill-available;
+    box-shadow: 0 0 20px 4px black;
+}
+
+.part-2-img>img {
+    border-top-right-radius: 300px;
+    border-bottom-right-radius: 300px;
+    position: absolute;
+    right: 0;
+    height: -webkit-fill-available;
+    box-shadow: 0 0 20px 4px black;
+}
+
+.w-160 {
+    width: 160px;
+}
+
+.p-under-bus {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 142.4%;
+    /* or 24px */
+
+    letter-spacing: 0.09em;
+}
+
+
+
+/* Slider Styles */
+
+.slider {
+    width: 900px;
+    height: 540px;
+
+    margin: 0 auto;
+    left: 0;
+    right: 0;
+
+}
+
+.slider .item {
+    height: 504px;
+    width: 434px;
+    position: absolute;
+    background: #fff;
+    border-radius: 10px;
+    transition: all ease 0.7s;
+    z-index: 1;
+    left: 0;
+    opacity: 0.4;
+    transform: scale(0.8);
+    right: 0;
+    margin: 0 auto;
+}
+
+.slider .item.active {
+    z-index: 2;
+    opacity: 1;
+    background: #fff;
+    transform: scale(1);
+}
+
+.travel-back {
+    background: url('../img/david-kohler-GrfPG8uhE0Y-unsplash\ 1.png') !important;
+    /* Full height */
+    height: 100%;
+
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.w-max-content {
+    width: max-content;
+}
+
+
+
+
+.senior-gallery {
+    position: relative;
+    flex-grow: 1;
+    margin: auto;
+    max-width: 1200px;
+    max-height: 1200px;
+    display: grid;
+    grid-template-columns: repeat(8, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    grid-gap: 2vmin;
+    justify-items: center;
+    align-items: center;
+}
+
+.senior-gallery>IMG {
+    z-index: 1;
+    grid-column: span 2;
+    max-width: 100%;
+    margin-bottom: -52%;
+    -webkit-clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+    transform: scale(1);
+    transition: all 0.25s;
+}
+
+.senior-gallery>IMG:nth-child(7n+1) {
+    grid-column: 2/span 2;
+}
+
+.senior-gallery>IMG:hover {
+    z-index: 2;
+    transform: scale(2);
+}
+
+
+
+.header-travel-part {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 21px;
+    text-transform: uppercase;
+    color: var(--yellow);
+    line-height: 124.9%;
+    /* or 26px */
+    letter-spacing: 0.09em;
+    font-variant: small-caps;
+    margin-bottom: 20px;
+}
+
+.line-img-header-part {
+    height: max-content;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+
+.read-more-a {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 124.9%;
+    /* or 22px */
+    letter-spacing: 0.09em;
+    text-transform: lowercase;
+    margin-top: 20px;
+}
+
+.big-head-style {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 129.4%;
+    /* or 39px */
+    letter-spacing: 0.09em;
+    text-transform: capitalize;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+}
+
+.lets-explore {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 129.4%;
+    /* or 44px */
+
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+
+.counter-part {
+    left: calc(50% - 135px/2 - 417.5px);
+    top: calc(50% - 62px/2 - 803px);
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 48px;
+    line-height: 129.4%;
+    /* or 62px */
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    color: #FFEAA0;
+}
+
+.counter-head {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 34px;
+    line-height: 129.4%;
+    /* identical to box height, or 44px */
+
+    letter-spacing: 0.06em;
+    text-transform: capitalize;
+
+    color: #FFFFFF;
+}
+
+.counter-p-part {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 149.4%;
+    /* or 24px */
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+}
+
+.travel-img-back-head {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 27px;
+    line-height: 129.4%;
+    /* identical to box height, or 35px */
+
+    letter-spacing: 0.065em;
+    text-transform: capitalize;
+    margin-bottom: 27px;
+    color: #FFFFFF;
+
+}
+
+.travel-img-back-p {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 149.4%;
+    /* or 24px */
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+}
+
+.Expand-Style {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 37px;
+    line-height: 124.4%;
+    /* or 46px */
+
+    letter-spacing: 0.205em;
+    text-transform: capitalize;
+
+    color: #FFEAA0;
+}
+
+.why-camper {
+    font-family: PTFont;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 34px;
+    line-height: 129.4%;
+    /* identical to box height, or 44px */
+
+    letter-spacing: 0.1em;
+    text-transform: capitalize;
+    margin-bottom: 26px;
+    color: #FFFFFF;
+}
+
+.why-camper-txt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 149.4%;
+    /* or 27px */
+
+    text-align: center;
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+}
+
+.expand-p-txt {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 17px;
+    line-height: 149.4%;
+    /* or 25px */
+
+    letter-spacing: 0.09em;
+
+    color: #FFFFFF;
+}
